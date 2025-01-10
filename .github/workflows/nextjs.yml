@@ -52,3 +52,6 @@ jobs:
             git push --force
           env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+permissions:
+  contents: write  # This ensures the GitHub Actions bot has write permissions to the repository contents
