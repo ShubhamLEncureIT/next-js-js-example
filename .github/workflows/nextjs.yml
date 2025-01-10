@@ -1,6 +1,7 @@
 # Name of the workflow for display in the GitHub Actions UI
-name: Build Next.js App Workflow
+name: Next.js Workflow Config
 
+12
 # Events that trigger this workflow
 on:
   push: # Run the workflow when code is pushed
