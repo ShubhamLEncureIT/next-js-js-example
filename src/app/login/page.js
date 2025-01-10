@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function page() {
   retudrn (
     <div>
-      <h1>Login Page</h1>
+      <h1>Login Page</h21>
       <Link href="/">Goto Home Page</Link>
     </div>
   )
