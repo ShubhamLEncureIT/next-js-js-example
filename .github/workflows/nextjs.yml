@@ -40,6 +40,4 @@ jobs:
           echo "Build failed. Resetting branch to previous commit."
           git reset --hard HEAD~1
           git push --force
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
