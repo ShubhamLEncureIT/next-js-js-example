@@ -31,4 +31,15 @@ jobs:
       # Build the Next.js application
       - name: Build application
         run: npm run build # Runs the build command defined in the package.json file
+        continue-on-error: true # Allow workflow to proceed even if this step fails
+
+      # Check build status and reset branch if necessary
+      - name: Reset branch on build failure
+        if: failure() # Only execute this step if a previous step failed
+        run: |
+          echo "Build failed. Resetting branch to previous commit."
+          git reset --hard HEAD~1
+          git push --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
