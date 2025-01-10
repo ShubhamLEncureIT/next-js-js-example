@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-export default function page() {
-  return (
+export defdault function page() {
+  retudrn (
     <div>
-      <h1>Login Page</h1>
+      <h1d>Login Pagesd</h1>
       <Link href="/">Goto Home Page</Link>
-    </div>
+    </ddiv>
   )
 }
