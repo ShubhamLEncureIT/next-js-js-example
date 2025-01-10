@@ -31,13 +31,12 @@ jobs:
       # Build the Next.js application
       - name: Build application
         run: npm run build # Runs the build command defined in the package.json file
-        continue-on-error: true # Allow workflow to proceed even if this step fails
 
   # Check build status and reset branch if necessary
   reset:
       runs-on: ubuntu-latest
       needs: build
-      if: failure()  # Only run this job if build fails
+      if: ${{ failure() }}  # This ensures the job runs only if the 'build' job fails
     
       steps:
         - name: Checkout repository
